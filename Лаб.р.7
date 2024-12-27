@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="stylesheet" href="asf.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homescapes - любимая игра девочек" />
+    <meta name="Keywords" content="Homescapes, игры для детей">
+    <title>MLBB</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.ico" />
+</head>
+<body>
+    <div id="container">
+        <h1><img src="logo.png" height="35" width="100">mobilelegends</h1>
+
+        <p></p>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('tab1')">Персонажи</div>
+            <div class="tab" onclick="showTab('tab2')">вики</div>
+            <div class="tab" onclick="showTab('tab3')">Как скачать</div>
+            <div class="tab" onclick="showTab('tab4')">Про сцена</div>
+        </div>
+
+        <div class="tab-content active" id="tab1">
+            <p>mobilelegends — это популярная многопользовательская онлайн-игра в жанре MOBA (Multiplayer Online Battle Arena), разработанная и изданная Moonton.</p>
+        </div>
+
+        <div class="tab-content" id="tab2">
+            <p>разработанная и изданная Moonton <a class="nav-link" href=https://mobile-legends.fandom.com/wiki/MLBB_Wiki>ссылке</a></p>
+            </div>
+
+        <div class="tab-content" id="tab3">
+            <p>Скачать игруможно по  <a class="nav-link" href=https://www.mobilelegends.com>ссылке</a> с не официального сайта, а также через Google Play AppStore.</p>
+        </div>
+
+        <div class="tab-content" id="tab4">
+            <p>Про-сцена Mobile Legends: Bang Bang представляет собой захватывающее зрелище для поклонников киберспорта. Профессиональные команды из разных уголков мира сражаются в турнирах с крупными призовыми фондами и высокой степенью конкуренции. Игроки демонстрируют высший уровень мастерства и стратегии, координируя действия своих героев, чтобы достичь победы.
+
+                Песня Mobile Legends, также известная как "Mobile Legends: Bang Bang" Theme, является официальным саундтреком популярной MOBA-игры Mobile Legends: Bang Bang. <a class="nav-link" href="/watch?v=F5LfOmLOlPA">«Остин»</a>, в котором главным героем является дворецкий Остин</p>
+        </div>
+    </div>
+    <div id="container">
+        <div class="pane">
+            <table>
+                <tr>
+                    <td>
+                        <img src="he1.jpg" height="200" width="450">
+                    </td>
+                    <td>
+                        <p>
+                           В Mobile Legends: Bang Bang игрокам доступно более 100 уникальных персонажей, известных как герои. Каждый герой обладает своими особыми навыками и способностями<button>ovjg</button>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <div class="pane">
+            <table>
+                <tr>
+                    <td>
+                        <img src="he2.jpg" height="200" width="450">
+                    </td>
+                    <td>
+                        <p>
+                            Игра проходит на различных картах, где две команды по пять игроков сражаются друг против друга. Карты включают линии (lanes), башни (turrets) и базу (nexus).<button>ovjg</button>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        <footer>
+            <p>Игроки выбирают героев с уникальными навыками и способностями. Роли героев включают:</p>
+        </footer>
+        <script>
+            container.onclick = function (event) {
+                if (event.target.className != 'remove-button') return;
+                let pane = event.target.closest('.pane');
+                pane.remove();
+            };
+        </script>
+        
+        <script>
+           
+            function showTab(tabId) {
+    
+                var tabs = document.getElementsByClassName("tab-content");
+                for (var i = 0; i < tabs.length; i++) {
+                    tabs[i].classList.remove("active");
+                }
+
+                var tab = document.getElementById(tabId);
+                tab.classList.add("active");
+
+                
+                var activeTabs = document.getElementsByClassName("tab");
+                for (var i = 0; i < activeTabs.length; i++) {
+                    activeTabs[i].classList.remove("active");
+                }
+
+                
+                var activeTab = document.querySelector(`.tab[data-tab="${tabId}"]`);
+                activeTab.classList.add("active");
+            }
+        </script>
+</body>
+</html>
